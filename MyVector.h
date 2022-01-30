@@ -3,11 +3,20 @@
 template <class T>
 class MyVector{
 public:
-    MyVector (T a, T b, T c);
+    MyVector();
+	int size();
+	int capacity();
+	bool empty();
+	void push_back(item);
+	void pop_back();
+	void pop_back(int n);
+	void clear();
+	T &operator[] (int n);	
 
-    void printem();
 private:
-    T data[3];
+    T *data;
+	int vectSize;
+	int vectCapacity;
 };
 
 #include "MyVector.cxx"
