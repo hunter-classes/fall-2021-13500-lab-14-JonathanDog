@@ -7,7 +7,7 @@ public:
 	int size();
 	int capacity();
 	bool empty();
-	void push_back(item);
+	void push_back(T item);
 	void pop_back();
 	void pop_back(int n);
 	void clear();

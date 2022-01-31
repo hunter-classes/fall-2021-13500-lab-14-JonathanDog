@@ -5,16 +5,12 @@
 main: main.o 
 	g++ -o main main.o 
 
-tests: tests.o funcs.o
-	g++ -o tests tests.o funcs.o
-
-
-
-funcs.o: funcs.cpp 
+tests: tests.o 
+	g++ -o tests tests.o  
 
 main.o: main.cpp MyVector.h MyVector.cxx 
 
-tests.o: tests.cpp doctest.h funcs.h
+tests.o: tests.cpp doctest.h MyVector.h MyVector.cxx
 
 clean:
-	rm -f main.o funcs.o tests.o
+	rm -f main.o tests.o
